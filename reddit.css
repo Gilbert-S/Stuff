@@ -820,12 +820,21 @@ domain("old.reddit.com") {
                 
                 div.expando {
                     margin-left: -140px;
+                    display: flex;
+                    justify-content: center;
+                    
+                }
+                
+                div.expando:has(iframe) {
+                    height: 66vh;
+                    width: calc(100% + 140px);
+                    min-width: 100%;
                 }
 
 
                 div.expando iframe.media-embed {
-                    height: 75vh!important;
-                    width: 100%!important;
+                    height: 100%;
+                    width: 100%;
                 }
                 /* the rest is at the end of the file */
             }
