@@ -283,12 +283,26 @@ domain("old.reddit.com") {
                 margin: 0;
                 padding: 16px;
 
-                width: 20px;
                 overflow: hidden;
+                height: 16px;
+                width: 45px;
             }
 
-            &:active {
+            &:hover {
                 width: 300px;
+                height: auto;
+            }
+            
+            &::before {
+                content: "⇊";
+                line-height: 16px;
+                margin-bottom: 16px;
+                display: block;
+                text-align: center;
+            }
+            
+            &:hover::before {
+                display: none;
             }
 
             .md {
