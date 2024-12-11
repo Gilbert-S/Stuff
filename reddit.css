@@ -294,11 +294,13 @@ domain("old.reddit.com") {
             }
             
             &::before {
-                content: "⇊";
+                content: "↧";
                 line-height: 16px;
-                margin-bottom: 16px;
+                margin-bottom: 32px;
                 display: block;
                 text-align: center;
+                font-size: large;
+                opacity: .5;
             }
             
             &:hover::before {
@@ -666,6 +668,7 @@ domain("old.reddit.com") {
                     display: flex !important;
                     margin: 0;
                     padding: 8px 0;
+                    position: relative;
                 }
 
                 &.last-clicked {
@@ -766,12 +769,12 @@ domain("old.reddit.com") {
 
                 .expando-button {
                     & {
-                        filter: grayscale(100%) invert(90%);
-                        margin: 8px 16px 0 0;
-                    }
-
-                    &:hover {
-                        filter: grayscale(100%);
+                        position: absolute;
+                        left: 72px;
+                        top: 0;
+                        width: 140px;
+                        height: 100%;
+                        background: transparent;
                     }
                 }
 
@@ -810,12 +813,19 @@ domain("old.reddit.com") {
                     background-color: var(--gray-0);
                     border: 4px solid var(--gray-1);
                 }
+                
+                .entry {
+                    overflow: visible;
+                }
+                
+                div.expando {
+                    margin-left: -140px;
+                }
 
 
                 div.expando iframe.media-embed {
-                    --mewidth: calc(40vw);
-                    height: calc(var(--mewidth) * 0.5625);
-                    width: var(--mewidth);
+                    height: 50vh;
+                    width: 100%;
                 }
                 /* the rest is at the end of the file */
             }
