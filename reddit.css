@@ -824,8 +824,8 @@ domain("old.reddit.com") {
 
 
                 div.expando iframe.media-embed {
-                    height: 50vh;
-                    width: 100%;
+                    height: 75vh!important;
+                    width: 100%!important;
                 }
                 /* the rest is at the end of the file */
             }
